@@ -356,14 +356,15 @@ const MapTwo = () => {
 
 
   const changePerspective = () => {
-    if(!twoDimension) {
-      setViews(new _GlobeView()); setTwoDimension(true)
-      setInitialState({...initialState, zoom:15})
-    }
-    else {
-      setViews(new MapView()); setTwoDimension(false)
-      setInitialState({...initialState, pitch:0, zoom:16})
-    }
+    // if(!twoDimension) {
+    //   setViews(new _GlobeView()); setTwoDimension(true)
+    //   setInitialState({...initialState, zoom:15})
+    // }
+    // else {
+    //   setViews(new MapView()); setTwoDimension(false)
+    //   setInitialState({...initialState, pitch:0, zoom:16})
+    // }
+    setInitialState({...initialState, pitch:0, zoom:16})
   }
 
   return (
