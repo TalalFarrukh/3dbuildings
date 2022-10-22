@@ -1,0 +1,146 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": null,
+        "gid": null,
+        "val3dity_codes": null,
+        "path": null,
+        "height": 25,
+        "name": "NU-VU",
+        "tile_id": null,
+        "ogc_fid": null,
+        "layer": null,
+        "lod11_replace": null,
+        "pand_deel_id": null,
+        "id": "e155c8ed2dfca6c126f2e919d9d5f32f"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.863054,
+              52.334545,
+              0
+            ],
+            [
+              4.86362,
+              52.334557,
+              0
+            ],
+            [
+              4.86401,
+              52.334559,
+              0
+            ],
+            [
+              4.864365,
+              52.334547,
+              0
+            ],
+            [
+              4.864201,
+              52.334267,
+              0
+            ],
+            [
+              4.863054,
+              52.334276,
+              0
+            ],
+            [
+              4.863054,
+              52.334545,
+              0
+            ]
+          ]
+        ],
+        
+        "type": "Polygon"
+      },
+      "id": "23be25e7dd35b06cc2b65409a14828b4"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": null,
+        "gid": null,
+        "val3dity_codes": null,
+        "path": null,
+        "height": 49,
+        "name": "NU-VU",
+        "tile_id": null,
+        "ogc_fid": null,
+        "layer": null,
+        "lod11_replace": null,
+        "pand_deel_id": null,
+        "id": "5e2284b3a4de452f2d8d971b3cb4e59e"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.863045,
+              52.334916,
+              0
+            ],
+            [
+              4.863045,
+              52.334626,
+              0
+            ],
+            [
+              4.863614,
+              52.334622,
+              0
+            ],
+            [
+              4.86362,
+              52.334557,
+              0
+            ],
+            [
+              4.864004,
+              52.334559,
+              0
+            ],
+            [
+              4.864066,
+              52.334634,
+              0
+            ],
+            [
+              4.864321,
+              52.334631,
+              0
+            ],
+            [
+              4.864418,
+              52.334679,
+              0
+            ],
+            [
+              4.864497,
+              52.334918,
+              0
+            ],
+            [
+              4.864388,
+              52.334916,
+              0
+            ],
+            [
+              4.863045,
+              52.334916,
+              0
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "4beba8be68db4b7c330134294ed63b4f"
+    }
+  ],
+  "type": "FeatureCollection"
+}

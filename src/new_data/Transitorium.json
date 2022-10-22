@@ -1,0 +1,315 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": null,
+        "gid": null,
+        "val3dity_codes": null,
+        "path": null,
+        "height": 15.6,
+        "name": "Transitorium",
+        "tile_id": null,
+        "ogc_fid": null,
+        "layer": null,
+        "lod11_replace": null,
+        "pand_deel_id": null,
+        "id": "17a85f4f515853d7d3744628e2cba0b7"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.86205,
+              52.334847,
+              0
+            ],
+            [
+              4.862053,
+              52.334552,
+              0
+            ],
+            [
+              4.862151,
+              52.334552,
+              0
+            ],
+            [
+              4.86215,
+              52.334525,
+              0
+            ],
+            [
+              4.862052,
+              52.334525,
+              0
+            ],
+            [
+              4.862057,
+              52.334037,
+              0
+            ],
+            [
+              4.862113,
+              52.334035,
+              0
+            ],
+            [
+              4.862114,
+              52.333855,
+              0
+            ],
+            [
+              4.862721,
+              52.333853,
+              0
+            ],
+            [
+              4.862725,
+              52.333804,
+              0
+            ],
+            [
+              4.862975,
+              52.333803,
+              0
+            ],
+            [
+              4.862975,
+              52.334048,
+              0
+            ],
+            [
+              4.862507,
+              52.334048,
+              0
+            ],
+            [
+              4.862507,
+              52.334149,
+              0
+            ],
+            [
+              4.862637,
+              52.33415,
+              0
+            ],
+            [
+              4.862636,
+              52.334273,
+              0
+            ],
+            [
+              4.862975,
+              52.334273,
+              0
+            ],
+            [
+              4.862977,
+              52.334417,
+              0
+            ],
+            [
+              4.862756,
+              52.334416,
+              0
+            ],
+            [
+              4.862757,
+              52.334396,
+              0
+            ],
+            [
+              4.862726,
+              52.334397,
+              0
+            ],
+            [
+              4.862725,
+              52.334665,
+              0
+            ],
+            [
+              4.862777,
+              52.334664,
+              0
+            ],
+            [
+              4.862784,
+              52.334783,
+              0
+            ],
+            [
+              4.86272,
+              52.334783,
+              0
+            ],
+            [
+              4.86272,
+              52.334858,
+              0
+            ],
+            [
+              4.86205,
+              52.334847,
+              0
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "0a79f173afb42e3f93fa48d853773372"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": null,
+        "gid": null,
+        "val3dity_codes": null,
+        "path": null,
+        "height": 0,
+        "name": "Transitorium",
+        "tile_id": null,
+        "ogc_fid": null,
+        "layer": null,
+        "lod11_replace": null,
+        "pand_deel_id": null,
+        "id": "0b1c7221136ff85d7183667b16ed0902"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.862247,
+              52.334148,
+              0
+            ],
+            [
+              4.862245,
+              52.334049,
+              0
+            ],
+            [
+              4.862447,
+              52.334047,
+              0
+            ],
+            [
+              4.862447,
+              52.334147,
+              0
+            ],
+            [
+              4.862247,
+              52.334148,
+              0
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "8b8a77d0bfba3d6aab19470124b3e6bf"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": null,
+        "gid": null,
+        "val3dity_codes": null,
+        "path": null,
+        "height": 58,
+        "name": "Transitorium",
+        "tile_id": null,
+        "ogc_fid": null,
+        "layer": null,
+        "lod11_replace": null,
+        "pand_deel_id": null,
+        "id": "de17ae036f232349af69a010515fbb32"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.862516,
+              52.334078,
+              0
+            ],
+            [
+              4.862577,
+              52.334077,
+              0
+            ],
+            [
+              4.862574,
+              52.333981,
+              0
+            ],
+            [
+              4.862515,
+              52.333982,
+              0
+            ],
+            [
+              4.862516,
+              52.334078,
+              0
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "c4c997e922b73d6fe6e3fb8c3a5f8b00"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fid": null,
+        "gid": null,
+        "val3dity_codes": null,
+        "path": null,
+        "height": 0,
+        "name": "Transitorium",
+        "tile_id": null,
+        "ogc_fid": null,
+        "layer": null,
+        "lod11_replace": null,
+        "pand_deel_id": null,
+        "id": "04c082636f8d771d356675ec42ce65b1"
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              4.862242,
+              52.334664,
+              0
+            ],
+            [
+              4.862242,
+              52.334523,
+              0
+            ],
+            [
+              4.862533,
+              52.334523,
+              0
+            ],
+            [
+              4.862532,
+              52.334663,
+              0
+            ],
+            [
+              4.862242,
+              52.334664,
+              0
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": "db2733bba40ca4fa861f6013682de697"
+    }
+  ],
+  "type": "FeatureCollection"
+}
