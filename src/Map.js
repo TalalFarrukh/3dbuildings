@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import 'leaflet/dist/leaflet.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import MF from './new_data/MF.json'
@@ -11,22 +11,24 @@ import OZW from './new_data/OZW.json'
 import Transit from './new_data/Transitorium.json'
 import WN from './new_data/W&N.json'
 import DeckGL, { GeoJsonLayer, FlyToInterpolator } from 'deck.gl'
-import {TileLayer} from '@deck.gl/geo-layers'
-import {BitmapLayer} from '@deck.gl/layers'
+import { TileLayer } from '@deck.gl/geo-layers'
+import { BitmapLayer } from '@deck.gl/layers'
 import { MapView, _GlobeView } from '@deck.gl/core'
 
 
 const MapTwo = () => {
 
-  const maxZoom = 25; const minZoom = 2
+  const maxZoom = 25; const minZoom = 12
+  const latBounds = [52.41639375063081, 52.29380752973293]
+  const longBounds = [5.050197222596376, 4.736692757660698]
 
   var defaultZoom = null; var changeZoom = null;
 
   const [twoDimension, setTwoDimension] = useState(false)
   const [views, setViews] = useState(new MapView())
 
-  if(window.innerWidth<720 || twoDimension) {
-    defaultZoom = 14; changeZoom = 15.4
+  if(window.innerWidth<720) {
+    defaultZoom = 14.2; changeZoom = 15.4
   }
   else {
     defaultZoom = 15; changeZoom = 16.7
@@ -52,7 +54,6 @@ const MapTwo = () => {
       else {
         setSelected(null)
       }
-      console.log(info); console.log(selected)
     }
   }
 
@@ -60,12 +61,16 @@ const MapTwo = () => {
 
   const transparency = 0.9
 
+  const selectedColor = [240,230,140]
+  const unselectedColor = [255,255,255]
+
   const layers = [
 
     new TileLayer({
       data: tileLayerData,
       minZoom: 0,
       maxZoom: 19,
+      tileSize: 256,
       renderSubLayers: props => {
         const {
           bbox: {west, south, east, north}
@@ -84,15 +89,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -101,15 +106,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -118,15 +123,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -135,15 +140,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -152,15 +157,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       }, 
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -169,15 +174,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -186,15 +191,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -203,15 +208,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
 
@@ -220,15 +225,15 @@ const MapTwo = () => {
       filled: true, extruded: true,  wireframe: true, pickable: true,
       getElevation: f => f.properties.height,
       getFillColor: f => {
-        if (selected && selected.property===f.properties.name) return [240,230,140]
-        else if(selected && selected.property!==f.properties.name) return [255,255,255]
-        else return [255,255,255]
+        if (selected && selected.property===f.properties.name) return selectedColor
+        else if(selected && selected.property!==f.properties.name) return unselectedColor
+        else return unselectedColor
       },
       updateTriggers: {
         getFillColor: [selected]
       },
-      getLineColor: [255, 255, 255],
-      autoHighlight: true, highlightColor: [240,230,140],
+      getLineColor: unselectedColor,
+      autoHighlight: true, highlightColor: selectedColor,
       onClick
     }),
   ]
@@ -356,22 +361,27 @@ const MapTwo = () => {
 
 
   const changePerspective = () => {
-    // if(!twoDimension) {
-    //   setViews(new _GlobeView()); setTwoDimension(true)
-    //   setInitialState({...initialState, zoom:15})
-    // }
-    // else {
-    //   setViews(new MapView()); setTwoDimension(false)
-    //   setInitialState({...initialState, pitch:0, zoom:16})
-    // }
-    setInitialState({...initialState, pitch:0, zoom:16})
+    if(twoDimension) {
+      setInitialState({...initialState, latitude:52.333762935282785, longitude:4.864205092154478, zoom:defaultZoom, pitch:30,
+      transitionInterpolator: new FlyToInterpolator({speed: 1.5}), transitionDuration: 'auto'})
+    }
+    else {
+      setInitialState({...initialState, latitude:52.333762935282785, longitude:4.864205092154478, zoom:defaultZoom, pitch:0,
+      transitionInterpolator: new FlyToInterpolator({speed: 1.5}), transitionDuration: 'auto'})
+    }
+    setTwoDimension(!twoDimension)
   }
+
 
   return (
     <div>
         <div style={{ height: '80vh', width: '100vw', position: 'relative' }}>
           <DeckGL initialViewState={initialState} controller={{doubleClickZoom:false, touchRotate:true}} layers={layers}  
-          getTooltip={({object}) => object && (object.properties.name)} views={views} />
+          getTooltip={({object}) => object && (object.properties.name)} views={views} 
+          onViewStateChange={({viewState}) => {
+            viewState.longitude = Math.min(longBounds[0], Math.max(longBounds[1], viewState.longitude))
+            viewState.latitude = Math.min(latBounds[0], Math.max(latBounds[1], viewState.latitude))
+          }} />
         </div>
 
         <div style={{ zIndex: 1 }}>
@@ -403,7 +413,7 @@ const MapTwo = () => {
         </div>
 
         <div>
-          <button onClick={changePerspective}>Change View</button>
+          <button onClick={changePerspective}>Home View</button>
         </div>
 
 
