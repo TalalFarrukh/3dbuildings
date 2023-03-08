@@ -1,0 +1,65 @@
+{
+    "type":"FeatureCollection",
+    "features":[
+        {
+            "type":"Feature",
+            "properties": {
+                "name":"Food",
+                "icon":"Food"
+            },
+            "geometry": {
+                "coordinates": [4.865642255821626,52.334400271354525],
+                "type":"Point"
+            },
+            "id":0
+        },
+        {
+            "type":"Feature",
+            "properties": {
+                "name":"Drinks",
+                "icon":"Drinks"
+            },
+            "geometry":{
+                "coordinates":[4.864413450894091,52.33397250458992],
+                "type":"Point"
+            },
+            "id":1
+        },
+        {
+            "type":"Feature",
+            "properties":{
+                "name":"Book",
+                "icon":"Book"
+            },
+            "geometry":{
+                "coordinates":[4.867437055744119,52.33464600783739],
+                "type":"Point"
+            },
+            "id":2
+        },
+        {
+            "type":"Feature",
+            "properties":{
+                "name":"Basketball",
+                "icon":"Basketball"
+            },
+            "geometry":{
+                "coordinates":[4.865452342476857,52.333874186538566],
+                "type":"Point"
+            },
+            "id":3
+        },
+        {
+            "type":"Feature",
+            "properties":{
+                "name":"Volleyball",
+                "icon":"Volleyball"
+            },
+            "geometry":{
+                "coordinates":[4.864833863157145,52.33389674936555],
+                "type":"Point"
+            },
+            "id":4
+        }
+    ]
+}
