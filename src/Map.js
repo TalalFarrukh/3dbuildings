@@ -18,7 +18,7 @@ import { TileLayer } from '@deck.gl/geo-layers'
 import { BitmapLayer, IconLayer } from '@deck.gl/layers'
 import { MapView, _GlobeView } from '@deck.gl/core'
 import { MapContext } from 'react-map-gl/dist/esm/components/map'
-import basketballImg from './images/basketball.png'
+import img from './images/Images.png'
 
 
 const MapTwo = () => {
@@ -124,15 +124,15 @@ const MapTwo = () => {
 
   const selectedColor = [240,230,140]
   const unselectedColor = [255,255,255]
-  const lineColor = [0,0,0]
+  const lineColor = [20,137,248]
 
 
   const ICON__MAPPING = {
-    Food: { x: 0, y: 140, width: 128, height: 128, anchorY:256, mask: false },
-    Drinks: { x: 330, y: 0, width: 128, height: 128, anchorY:256, mask: false },
-    Book: { x: 160, y: 0, width: 128, height: 128, anchorY:256, mask: false },
-    Basketball: { x: 0, y: 0, width: 128, height: 128, anchorY:256, mask: false },
-    Volleyball: { x: 160, y: 145, width: 128, height: 128, anchorY:256, mask: false }
+    Food: { x: 330, y: 0, width: 165, height: 165, anchorY:256, mask: false },
+    Drinks: { x: 165, y: 165, width: 165, height: 165, anchorY:256, mask: false },
+    Book: { x: 165, y: 0, width: 165, height: 165, anchorY:256, mask: false },
+    Basketball: { x: 0, y: 0, width: 165, height: 165, anchorY:256, mask: false },
+    Volleyball: { x: 0, y: 165, width: 165, height: 165, anchorY:256, mask: false }
   }
   
   const layers = [
@@ -159,7 +159,7 @@ const MapTwo = () => {
       id: 'icon-layer',
       data: poi.features,
       pickable: true,
-      iconAtlas: basketballImg,
+      iconAtlas: img,
       iconMapping: ICON__MAPPING,
       getIcon: d => d.properties.name,
       sizeScale: 60,
@@ -172,13 +172,13 @@ const MapTwo = () => {
     new GeoJsonLayer({
       id: 'Rectangle', data: rectangle, opacity: transparency, stroked: false,
       filled: true, pickable: true,
-      getFillColor: [50,205,50],
+      getFillColor: [195,219,181],
     }),
     
     new GeoJsonLayer({
       id: 'Path', data: path, opacity: transparency, stroked: false,
       filled: true, pickable: true,
-      getLineColor: lineColor, getLineWidth: 3,
+      getLineColor: lineColor, getLineWidth: 5,
       autoHighlight: true, highlightColor: selectedColor
     }),
 
@@ -403,6 +403,7 @@ const MapTwo = () => {
       autoHighlight: true, highlightColor: selectedColor,
       onHover: ({ object, x, y }) => {
         if (object) {
+          console.log(object)
           setSelected({ x, y, property: 'W&N Gebouw' })
           setHovered(true)
         }
